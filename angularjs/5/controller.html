@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <script src="../js/angular.js"></script>
+    <meta charset="UTF-8">
+    <title>Controller Sample</title>
+    <style>
+        .button {
+            display: inline-block;
+            background-color: #009bff;
+            color: #FFF;
+            width: 100px;
+            line-height: 40px;
+            height: 40px;
+            cursor: hand;
+            text-align: center;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+<div ng-controller="FirstController" ng-app="app">
+    <h4>a sample</h4>
+    <button ng-click="add(1)" class="button">加</button>
+    <a ng-click="subtract(1)" class="button">减</a>
+    <span ng-click="muti(2)" class="button">乘</span>
+    <em ng-click="clear()" class="button">清零</em>
+    <h4>the counter:{{counter}}</h4>
+
+</div>
+
+<script type="text/javascript">
+    var app = angular.module('app', []);
+    app.controller('FirstController', function ($scope) {
+        $scope.counter = 0;
+        $scope.add = function (amount) {
+            $scope.counter += amount;
+        };
+
+        $scope.subtract = function (amount) {
+            $scope.counter -= amount;
+        };
+
+        $scope.muti=function(amount){
+          $scope.counter *= amount;
+        };
+
+        $scope.clear=function(){
+            $scope.counter=0;
+        };
+
+    });
+
+</script>
+
+
+</body>
+</html>

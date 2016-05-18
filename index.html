@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>正方形的照片墙</title>
+    <style media="screen">
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .figure-list{
+            width: 100%;
+
+
+                        /*宽度等于屏幕宽度*/
+        }
+        .figure-list::after{
+            content: "";             /*清除浮动*/
+            clear: both;
+            display: block;
+
+        }
+        .figure{
+            width: 25%;              /*25%相对于父元素宽度，计算值为屏幕宽度的1/4*/
+            float:left;
+        }
+        .figure a{
+            display: block;
+            width: 100%;             /*100%相对于父元素宽度，计算值为屏幕宽度的1/4*/
+            padding-bottom: 100%;    /*100%相对于父元素的宽度，计算值为屏幕宽度的1/4，这样在height为0的情况下，就得到了一个正方形的区域*/
+            background-color: rgb(23, 218, 163);
+            position: relative;      /*让子元素相对于父元素定位*/
+            overflow: hidden;
+        }
+        .figure a img{
+            width: 100%;
+
+            position: absolute;      /*子元素采用绝对定位，避免其影响父元素高度*/
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="figure-list">
+    <div class="figure">
+        <a href="#"><img src="http://localhost:82/uploads/reviews/4/8902653089761806.jpg" alt=""></a>
+    </div>
+    <div class="figure">
+        <a href="#"><img src="http://localhost:82/uploads/reviews/4/8902653089761806.jpg" alt=""></a>
+    </div>
+    <div class="figure">
+        <a href="#"><img src="http://localhost:82/uploads/reviews/4/8902653089761806.jpg" alt=""></a>
+    </div>
+    <div class="figure">
+        <a href="#"><img src="http://localhost:82/uploads/reviews/4/8902653089761806.jpg" alt=""></a>
+    </div>
+</div>
+</body>
+</html>

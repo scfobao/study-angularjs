@@ -1,0 +1,1221 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>星宝汇微信平台 - 首页</title>
+    <style>
+        @import url('http://192.168.1.149:82/resource/front/font-awesome/css/font-awesome.css');
+        @import url('http://192.168.1.149:82/resource/front/css/uploadfiles.css');
+
+        html, body {
+            border: 0;
+            margin: 0;
+            padding: 0;
+
+
+        }
+
+        body {
+            background: #D5D5D5;
+        }
+
+        .one-fifth {
+            width: 20%;
+            display: inline-block;
+        }
+
+        .mobile-wrapper {
+            max-width: 542px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .mobile-body {
+            width: 100%;
+            display: inline-block;
+            padding: 50px 0;
+            background-color: #FFF;
+
+        }
+
+        /*-- 头部开始 --*/
+        .mobile-head {
+            width: 100%;
+            max-width: 542px;
+            height: 50px;
+            position: fixed;
+            z-index: 99;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .mobile-head h1 {
+            background: #FFFFFF;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+
+            border-bottom: 1px solid #ccc;
+            font-size: 16px;
+            font-weight: 100;
+        }
+
+
+
+
+
+        /*-- 头部结束 --*/
+
+        /*-- 脚部开始 --*/
+        .mobile-footer {
+            width: 100%;
+            max-width: 542px;
+            height: 50px;
+            background: #FFFFFF;
+            position: fixed;
+            bottom: 0;
+            display: inline-block;
+            font-size: 0;
+            border-top: 1px solid #B0B0B0;
+            z-index: 99;
+        }
+
+        .mobile-footer .select {
+            border-top: 2px solid #009BFF;
+        }
+
+        .mobile-footer .footer-home {
+            background: url("http://192.168.1.149:82/images/wechat/footer_home.png") no-repeat center;
+            background-size: auto 30px;
+            height: 100%;
+        }
+
+        .mobile-footer .footer-home.select {
+            background: url("http://192.168.1.149:82/images/wechat/footer_home_s.png") no-repeat center;
+            background-size: auto 30px;
+            height: 100%;
+        }
+
+        .mobile-footer .footer-user {
+            background: url("http://192.168.1.149:82/images/wechat/footer_user.png") no-repeat center;
+            background-size: auto 30px;
+            height: 100%;
+        }
+
+        .mobile-footer .footer-cart {
+            background: url("http://192.168.1.149:82/images/wechat/footer_cart.png") no-repeat center;
+            background-size: auto 30px;
+            height: 100%;
+        }
+
+        .mobile-footer .footer-share-pic {
+            background: url("http://192.168.1.149:82/images/wechat/footer_show.png") no-repeat center;
+            background-size: auto 30px;
+            height: 100%;
+        }
+
+        .mobile-footer .footer-share-pic.select {
+            background: url("http://192.168.1.149:82/images/wechat/footer_show_s.png") no-repeat center;
+            background-size: auto 30px;
+            height: 100%;
+        }
+
+        /*-- 脚部结束 --*/
+
+        /*-- 我的开始 --*/
+        .shadow {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            z-index: 100;
+            background: #ffffff;
+            opacity: 0.5;
+            overflow: hidden;
+        }
+
+        .mobile-mine.show {
+            width: 60%;
+            position: absolute;
+            top: 0;
+            right: -60%;
+            background: #FFFFFF;
+            z-index: 100;
+            height: 100%;
+        }
+
+        .mobile-mine .mine-top {
+            background: #D5D5D5;
+            padding-top: 40px;
+        }
+
+        .mobile-mine .mine-top .mine-setting {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            top: 15px;
+            right: 0;
+            color:#009bff;
+            background-size: auto 40%;
+        }
+
+        .mobile-mine .mine-top .mine-icon {
+            margin: auto;
+            margin-bottom: 10px;
+            width: 60%;
+            padding-bottom: 60%;
+            height: 0;
+            background-color: #ccc;
+            background-image: url(http://192.168.1.149:82/images/wechat/default_login.png);
+            border-radius: 50%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-origin: padding-box;
+        }
+
+        .mine-top .mine-name {
+            text-align: center;
+            padding-bottom: 10px;
+            color: #009BFF;
+            font-size: 14px;
+        }
+
+        .mobile-mine .mine-menu {
+            font-size: 0;
+            border-top: 1px solid #cccccc;
+            border-bottom: 1px solid #cccccc;
+        }
+
+        .mobile-mine .mine-menu > div {
+            width: 25%;
+            height: 100%;
+            display: inline-block;
+            border-right: 1px solid #cccccc;
+            margin-left: -1px;
+            position: relative;
+        }
+
+        .mobile-mine .mine-menu > div:last-child {
+            border: none;
+            margin: 0;
+        }
+
+        .mine-menu > div > img {
+            width: 100%;
+        }
+
+        .mine-menu > div .point {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: #009BFF;
+            border-radius: 50%;
+            color: #FFFFFF;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        .mobile-mine .mine-action {
+            padding: 10px 0px 10px 10px;
+            border-bottom: 1px solid #cccccc;
+            position: relative;
+        }
+
+        .mobile-mine .mine-action .btnRecharge {
+            border-style: none;
+            background-color: #009bff;
+            color: #FFF;
+            right: 5px;
+            position: absolute;
+            height: 30px;
+            width: 50px;
+            border-radius: 3px;
+            margin-top: -5px;
+            border: none;
+            padding: 0;
+        }
+
+        .mobile-mine .btnBack {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 100px;
+            height: 50px;
+            background: url(http://192.168.1.149:82/images/wechat/btn_back.png) no-repeat center;
+            background-size: auto 50%;
+        }
+
+        /*-- 我的结束 --*/
+
+        .more {
+            height: 30px;
+            line-height: 30px;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        /*--晒图开始--*/
+        .show-list {
+            background-color: #FFF;
+            font-size: 0.9em;
+        }
+
+        .show-list .show-wrapper {
+            width: 100%;
+        }
+
+        .show-list .show {
+            border-bottom: 1px solid #A5A5A5;
+            padding: 5px 10px;
+        }
+
+        .show-list .show .show-user-createtime div {
+            display: inline-block;
+            width: 62%;
+            height: 100%;
+            vertical-align: middle;
+            text-align: right;
+        }
+
+        .show-list .show .show-user-createtime div:first-child {
+            width: 12%;
+            height: 0;
+            padding-bottom: 12%;
+            background-image: url();
+            background-size: cover;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-repeat: no-repeat;
+            border: 1px solid #ccc;
+            border-radius: 50%;
+            background-origin: padding-box;
+        }
+
+        .show-list .show .show-user-createtime div:first-child + div {
+            width: 17%;
+            text-align: left;
+            margin-left: 10px;
+        }
+
+        .show-list .show .show-user-createtime .user-img img {
+            width: 99%;
+            height: 99%;
+            border-radius: 50%;
+            border: 1px solid #A5A5A5;
+        }
+
+        .show-list .show-content {
+            padding-bottom: 5px;
+            border-bottom: 1px solid #A5A5A5;
+        }
+
+        .show-list .show-content div {
+            display: inline-block;
+        }
+
+        .show-list .show-content .content-left {
+            width: 12%;
+        }
+
+        .show-list .show-content .content-right {
+            width: 80%;
+            margin-left: 10px;
+        }
+
+        .show-list .content-right .show-review {
+            color: #A5A5A5;
+            width: 100%;
+            padding-bottom: 10px;
+        }
+
+        .show-list .content-right .show-images {
+
+
+            width: 100%;
+
+
+        }
+
+        .show-list .content-right .show-images div {
+            display: inline-block;
+            float: left;
+            margin: 2px 2px 0 2px;
+        }
+
+        .show-list .content-right .show-images .small-img {
+
+            background-repeat: no-repeat;
+            background-size: cover;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+        }
+
+        .show-list .content-right .show-images .small-img:first-child {
+            width: 46%;
+            height: 0;
+            padding-bottom: 46%; /* 关键部分 */
+        }
+
+        .show-list .content-right .show-images .small-img {
+            width: 22%;
+            height: 0;
+            padding-bottom: 22%; /* 关键部分 */
+        }
+
+        .show-list .content-right .show-images .small-img img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .show-list .content-right .show-product-zan-reply {
+            width: 100%;
+            padding-top: 10px;
+        }
+
+        .show-list .content-right .show-product-zan-reply div {
+            margin: 2px;
+            padding: 0;
+            width: 25%;
+        }
+
+        .show-list .content-right .show-product-zan-reply div:first-child {
+            width: 34%;
+        }
+
+        .show-list .content-right .show-product-zan-reply div:last-child {
+            width: 34%;
+        }
+
+        .show-list .content-right .show-product-zan-reply em {
+            color: #009BFF;
+        }
+
+        .show-list .show-reply-list {
+            margin-top: 10px;
+        }
+
+        .show-list .show-reply-list .reply-info {
+            line-height: 20px;
+            width: 90%;
+            margin: 5px 0;
+        }
+
+        .show-list .show-reply-list .reply-info em {
+            font-style: normal;
+            color: gray;
+        }
+
+        .show-list .show-reply-list .more-reply i {
+            right: 10px;
+            position: absolute;
+            color: #A5A5A5;
+        }
+
+        .show-list .end {
+            height: 30px;
+            line-height: 30px;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .show-swiper {
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #000;
+            display: none;
+        }
+
+        .show-swiper img {
+            width: 100%;
+            max-width: 100%;
+            height: 100%;
+        }
+
+        /*--晒图结束--*/
+
+        /*--上传用户头像--*/
+
+        .mobile-wrapper .change-mine-icon {
+            background-color: #fff;
+            height: 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            max-width: 542px;
+            z-index: 101;
+            display: none;
+            border-top: 1px solid #ccc;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .ajax-file-upload {
+            margin-top: 35px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .mobile-wrapper .change-mine-icon .cancel {
+            width: 85px;
+            height: 18px;
+            background-color: #A5A5A5;
+            color: #FFF;
+            margin-right: auto;
+            margin-left: auto;
+            box-shadow: 0 2px 0 0 #777;
+            padding: 6px 0;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body class="login">
+
+
+
+<div class="mobile-wrapper">
+    <div class="mobile-head">
+        <h1>晒图</h1>
+    </div>
+
+    <div class="mobile-footer">
+        <div class="footer-home one-fifth ToURL" data-url="/wechat/home"></div>
+        <div class="footer-cart one-fifth ToURL" data-url="/wechat/cart/Listing"></div>
+        <div class="footer-share-pic one-fifth select ToURL" data-url="/wechat/show/Listing"></div>
+        <div class="one-fifth"></div>
+        <div class="footer-user one-fifth ToURL" data-url="/wechat/login"></div>
+    </div>
+
+    <div class="mobile-body">
+
+        <div class="show-list">
+
+            <div class="show">
+                <div class="show-wrapper">
+                    <div class="show-user-createtime">
+                        <div class="user-img" style="background-image: url(http://192.168.1.149:82/uploads/users/201605160203331149.jpg);"></div>
+                        <div class="user-name">李庆华</div>
+                        <div class="createtime">2016-05-06 14:38:02</div>
+                    </div>
+                    <div class="show-content">
+
+                        <div class="content-left"></div>
+                        <div class="content-right">
+                            <div class="show-review">
+                                士大夫士大夫                                    </div>
+                            <div class="show-images">
+                                <div class="small-img toShowSwiper ToURL" data-showid="35" data-url="/wechat/show/ShowReviewImage?showreviewid=35" style="background-image:url(http://192.168.1.149:82/uploads/reviews/77/201605060638002674_srctn.jpg)"><img src="/uploads/reviews/77/201605060638002674_srctn.jpg"></div>
+                                <div class="small-img toShowSwiper ToURL" data-showid="35" data-url="/wechat/show/ShowReviewImage?showreviewid=35" style="background-image:url(http://192.168.1.149:82/uploads/reviews/77/201605060638019317_srctn.jpg)"><img src="/uploads/reviews/77/201605060638019317_srctn.jpg"></div>
+                                <div style="clear:both;">
+                                </div>
+
+                                <div class="show-product-zan-reply">
+                                    <div class="product-name ToURL" data-url="/wechat/product/detail?ProductID=13">肉类/串</div>
+                                    <div class="zan ToURL" data-userid="" data-showid="35" data-url="/wechat/login">
+                                        <em class="fa fa-thumbs-o-up"></em>赞(<span>1</span>)
+                                    </div>
+
+                                    <div class="reply ToURL" data-url="/Wechat/Show/RepliesList?showid=35">
+                                        <em class="fa fa-comment-o">&nbsp;</em>评论(20)
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="show-reply-list">
+                        <div class="reply-info">李庆华                                        :<em>豆腐干大概</em>
+                        </div>
+                        <div class="reply-info">李庆华                                        :<em>豆腐干豆腐干大概</em>
+                        </div>
+                        <div class="reply-info">李庆华                                        :<em>56567</em>
+                        </div>
+                        <div class="more-reply ToURL" data-url="/Wechat/Show/RepliesList?showid=35">更多评论<i class="fa fa-angle-right"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="show">
+                <div class="show-wrapper">
+                    <div class="show-user-createtime">
+                        <div class="user-img" style="background-image: url(http://192.168.1.149:82/uploads/users/201605160203331149.jpg);"></div>
+                        <div class="user-name">李庆华</div>
+                        <div class="createtime">2016-05-06 14:37:26</div>
+                    </div>
+                    <div class="show-content">
+
+                        <div class="content-left"></div>
+                        <div class="content-right">
+                            <div class="show-review">
+                                士大夫士大夫                                    </div>
+                            <div class="show-images">
+                                <div class="small-img toShowSwiper ToURL" data-showid="34" data-url="/wechat/show/ShowReviewImage?showreviewid=34" style="background-image:url(http://192.168.1.149:82/uploads/reviews/76/201605060637237089_srctn.jpg)"><img src="/uploads/reviews/76/201605060637237089_srctn.jpg"></div>
+                                <div class="small-img toShowSwiper ToURL" data-showid="34" data-url="/wechat/show/ShowReviewImage?showreviewid=34" style="background-image:url(http://192.168.1.149:82/uploads/reviews/76/201605060637234030_srctn.png)"><img src="/uploads/reviews/76/201605060637234030_srctn.png"></div>
+                                <div style="clear:both;">
+                                </div>
+
+                                <div class="show-product-zan-reply">
+                                    <div class="product-name ToURL" data-url="/wechat/product/detail?ProductID=12">青菜/串</div>
+                                    <div class="zan ToURL" data-userid="" data-showid="34" data-url="/wechat/login">
+                                        <em class="fa fa-thumbs-o-up"></em>赞(<span>1</span>)
+                                    </div>
+
+                                    <div class="reply ToURL" data-url="/Wechat/Show/RepliesList?showid=34">
+                                        <em class="fa fa-comment-o">&nbsp;</em>评论(5)
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="show-reply-list">
+                        <div class="reply-info">李庆华                                        :<em>斯蒂芬斯蒂芬</em>
+                        </div>
+                        <div class="reply-info">李庆华                                        :<em>是对方是否</em>
+                        </div>
+                        <div class="reply-info">李庆华                                        :<em>大法官大法官</em>
+                        </div>
+                        <div class="more-reply ToURL" data-url="/Wechat/Show/RepliesList?showid=34">更多评论<i class="fa fa-angle-right"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="show">
+                <div class="show-wrapper">
+                    <div class="show-user-createtime">
+                        <div class="user-img" style="background-image: url(http://192.168.1.149:82/uploads/users/201605160203331149.jpg);"></div>
+                        <div class="user-name">李庆华</div>
+                        <div class="createtime">2016-02-18 17:48:42</div>
+                    </div>
+                    <div class="show-content">
+
+                        <div class="content-left"></div>
+                        <div class="content-right">
+                            <div class="show-review">
+                                太棒了                                    </div>
+                            <div class="show-images">
+                                <div class="small-img toShowSwiper ToURL" data-showid="4" data-url="/wechat/show/ShowReviewImage?showreviewid=4" style="background-image:url(http://192.168.1.149:82/uploads/reviews/4/2673973047840660_srctn.jpg)"><img src="/uploads/reviews/4/2673973047840660_srctn.jpg"></div>
+                                <div style="clear:both;">
+                                </div>
+
+                                <div class="show-product-zan-reply">
+                                    <div class="product-name ToURL" data-url="/wechat/product/detail?ProductID=13">肉类/串</div>
+                                    <div class="zan ToURL" data-userid="" data-showid="4" data-url="/wechat/login">
+                                        <em class="fa fa-thumbs-o-up"></em>赞(<span>0</span>)
+                                    </div>
+
+                                    <div class="reply ToURL" data-url="/Wechat/Show/RepliesList?showid=4">
+                                        <em class="fa fa-comment-o">&nbsp;</em>评论(13)
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="show-reply-list">
+                        <div class="reply-info">李庆华                                        :<em>sdfadfasdf</em>
+                        </div>
+                        <div class="reply-info">李庆华                                        :<em>sdfsf</em>
+                        </div>
+                        <div class="reply-info">李庆华                                        :<em>asdfasdfasdfasdfasdfasdfasdf</em>
+                        </div>
+                        <div class="more-reply ToURL" data-url="/Wechat/Show/RepliesList?showid=4">更多评论<i class="fa fa-angle-right"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="show">
+                <div class="show-wrapper">
+                    <div class="show-user-createtime">
+                        <div class="user-img" style="background-image: url(http://192.168.1.149:82/uploads/users/201605160203331149.jpg);"></div>
+                        <div class="user-name">李庆华</div>
+                        <div class="createtime">2016-02-18 17:48:42</div>
+                    </div>
+                    <div class="show-content">
+
+                        <div class="content-left"></div>
+                        <div class="content-right">
+                            <div class="show-review">
+                                不错不错                                    </div>
+                            <div class="show-images">
+                                <div class="small-img toShowSwiper ToURL" data-showid="5" data-url="/wechat/show/ShowReviewImage?showreviewid=5" style="background-image:url(http://192.168.1.149:82/uploads/reviews/4/2673973047840660_srctn.jpg)"><img src="/uploads/reviews/4/2673973047840660_srctn.jpg"></div>
+                                <div class="small-img toShowSwiper ToURL" data-showid="5" data-url="/wechat/show/ShowReviewImage?showreviewid=5" style="background-image:url(http://192.168.1.149:82/uploads/reviews/4/2040455281964600_srctn.jpg)"><img src="/uploads/reviews/4/2040455281964600_srctn.jpg"></div>
+                                <div style="clear:both;">
+                                </div>
+
+                                <div class="show-product-zan-reply">
+                                    <div class="product-name ToURL" data-url="/wechat/product/detail?ProductID=17">泰式冬阴..</div>
+                                    <div class="zan ToURL" data-userid="" data-showid="5" data-url="/wechat/login">
+                                        <em class="fa fa-thumbs-o-up"></em>赞(<span>1</span>)
+                                    </div>
+
+                                    <div class="reply ToURL" data-url="/Wechat/Show/RepliesList?showid=5">
+                                        <em class="fa fa-comment-o">&nbsp;</em>评论(4)
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="show-reply-list">
+                        <div class="reply-info">李庆华                                        :<em>345sesfsdf</em>
+                        </div>
+                        <div class="reply-info">李庆华                                        :<em>sdfsdf</em>
+                        </div>
+                        <div class="reply-info">李庆华                                        :<em>dfgdf</em>
+                        </div>
+                        <div class="more-reply ToURL" data-url="/Wechat/Show/RepliesList?showid=5">更多评论<i class="fa fa-angle-right"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="show">
+                <div class="show-wrapper">
+                    <div class="show-user-createtime">
+                        <div class="user-img" style="background-image: url(http://192.168.1.149:82/uploads/users/201605160203331149.jpg);"></div>
+                        <div class="user-name">李庆华</div>
+                        <div class="createtime">2016-02-18 17:48:42</div>
+                    </div>
+                    <div class="show-content">
+
+                        <div class="content-left"></div>
+                        <div class="content-right">
+                            <div class="show-review">
+                                太棒了                                    </div>
+                            <div class="show-images">
+                                <div class="small-img toShowSwiper ToURL" data-showid="7" data-url="/wechat/show/ShowReviewImage?showreviewid=7" style="background-image:url(http://192.168.1.149:82/uploads/reviews/4/2673973047840660_srctn.jpg)"><img src="/uploads/reviews/4/2673973047840660_srctn.jpg"></div>
+                                <div class="small-img toShowSwiper ToURL" data-showid="7" data-url="/wechat/show/ShowReviewImage?showreviewid=7" style="background-image:url(http://192.168.1.149:82/uploads/reviews/4/2040455281964600_srctn.jpg)"><img src="/uploads/reviews/4/2040455281964600_srctn.jpg"></div>
+                                <div style="clear:both;">
+                                </div>
+
+                                <div class="show-product-zan-reply">
+                                    <div class="product-name ToURL" data-url="/wechat/product/detail?ProductID=18">泰式小食..</div>
+                                    <div class="zan ToURL" data-userid="" data-showid="7" data-url="/wechat/login">
+                                        <em class="fa fa-thumbs-o-up"></em>赞(<span>1</span>)
+                                    </div>
+
+                                    <div class="reply ToURL" data-url="/Wechat/Show/RepliesList?showid=7">
+                                        <em class="fa fa-comment-o">&nbsp;</em>评论(6)
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="show-reply-list">
+                        <div class="reply-info">李庆华                                        :<em>非常赞</em>
+                        </div>
+                        <div class="reply-info">星宝会员                                        :<em>不错哦</em>
+                        </div>
+                        <div class="reply-info">李庆华                                        :<em>ertertertdf</em>
+                        </div>
+                        <div class="more-reply ToURL" data-url="/Wechat/Show/RepliesList?showid=7">更多评论<i class="fa fa-angle-right"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="show">
+                <div class="show-wrapper">
+                    <div class="show-user-createtime">
+                        <div class="user-img" style="background-image: url(http://192.168.1.149:82/uploads/users/201605160203331149.jpg);"></div>
+                        <div class="user-name">李庆华</div>
+                        <div class="createtime">2016-02-18 17:48:42</div>
+                    </div>
+                    <div class="show-content">
+
+                        <div class="content-left"></div>
+                        <div class="content-right">
+                            <div class="show-review">
+                                不错不错                                    </div>
+                            <div class="show-images">
+                                <div class="small-img toShowSwiper ToURL" data-showid="8" data-url="/wechat/show/ShowReviewImage?showreviewid=8" style="background-image:url(http://192.168.1.149:82/uploads/reviews/4/2673973047840660_srctn.jpg)"><img src="/uploads/reviews/4/2673973047840660_srctn.jpg"></div>
+                                <div class="small-img toShowSwiper ToURL" data-showid="8" data-url="/wechat/show/ShowReviewImage?showreviewid=8" style="background-image:url(http://192.168.1.149:82/uploads/reviews/4/2040455281964600_srctn.jpg)"><img src="/uploads/reviews/4/2040455281964600_srctn.jpg"></div>
+                                <div style="clear:both;">
+                                </div>
+
+                                <div class="show-product-zan-reply">
+                                    <div class="product-name ToURL" data-url="/wechat/product/detail?ProductID=22">大虾刺身</div>
+                                    <div class="zan ToURL" data-userid="" data-showid="8" data-url="/wechat/login">
+                                        <em class="fa fa-thumbs-o-up"></em>赞(<span>1</span>)
+                                    </div>
+
+                                    <div class="reply ToURL" data-url="/Wechat/Show/RepliesList?showid=8">
+                                        <em class="fa fa-comment-o">&nbsp;</em>评论(12)
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="show-reply-list">
+                        <div class="reply-info">李庆华                                        :<em>dfdfg </em>
+                        </div>
+                        <div class="reply-info">李庆华                                        :<em>认识的是法国</em>
+                        </div>
+                        <div class="reply-info">李庆华                                        :<em>大范甘迪</em>
+                        </div>
+                        <div class="more-reply ToURL" data-url="/Wechat/Show/RepliesList?showid=8">更多评论<i class="fa fa-angle-right"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="show">
+                <div class="show-wrapper">
+                    <div class="show-user-createtime">
+                        <div class="user-img" style="background-image: url(http://192.168.1.149:82/uploads/users/201605160203331149.jpg);"></div>
+                        <div class="user-name">李庆华</div>
+                        <div class="createtime">2015-12-18 14:51:33</div>
+                    </div>
+                    <div class="show-content">
+
+                        <div class="content-left"></div>
+                        <div class="content-right">
+                            <div class="show-review">
+                                赞(≧▽≦)/                                    </div>
+                            <div class="show-images">
+                                <div class="small-img toShowSwiper ToURL" data-showid="3" data-url="/wechat/show/ShowReviewImage?showreviewid=3" style="background-image:url(http://192.168.1.149:82/uploads/reviews/4/8902653089761806_srctn.jpg)"><img src="/uploads/reviews/4/8902653089761806_srctn.jpg"></div>
+                                <div class="small-img toShowSwiper ToURL" data-showid="3" data-url="/wechat/show/ShowReviewImage?showreviewid=3" style="background-image:url(http://192.168.1.149:82/uploads/reviews/4/2439822220549425_srctn.jpg)"><img src="/uploads/reviews/4/2439822220549425_srctn.jpg"></div>
+                                <div class="small-img toShowSwiper ToURL" data-showid="3" data-url="/wechat/show/ShowReviewImage?showreviewid=3" style="background-image:url(http://192.168.1.149:82/uploads/reviews/4/2673973047840660_srctn.jpg)"><img src="/uploads/reviews/4/2673973047840660_srctn.jpg"></div>
+                                <div class="small-img toShowSwiper ToURL" data-showid="3" data-url="/wechat/show/ShowReviewImage?showreviewid=3" style="background-image:url(http://192.168.1.149:82/uploads/reviews/4/2040455281964600_srctn.jpg)"><img src="/uploads/reviews/4/2040455281964600_srctn.jpg"></div>
+                                <div style="clear:both;">
+                                </div>
+
+                                <div class="show-product-zan-reply">
+                                    <div class="product-name ToURL" data-url="/wechat/product/detail?ProductID=12">青菜/串</div>
+                                    <div class="zan ToURL" data-userid="" data-showid="3" data-url="/wechat/login">
+                                        <em class="fa fa-thumbs-o-up"></em>赞(<span>5</span>)
+                                    </div>
+
+                                    <div class="reply ToURL" data-url="/Wechat/Show/RepliesList?showid=3">
+                                        <em class="fa fa-comment-o">&nbsp;</em>评论(24)
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="show-reply-list">
+                        <div class="reply-info">李庆华                                        :<em>dgdfg </em>
+                        </div>
+                        <div class="reply-info">李庆华                                        :<em>dfdf</em>
+                        </div>
+                        <div class="reply-info">李庆华                                        :<em>dgdgfdfgd</em>
+                        </div>
+                        <div class="more-reply ToURL" data-url="/Wechat/Show/RepliesList?showid=3">更多评论<i class="fa fa-angle-right"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="show">
+                <div class="show-wrapper">
+                    <div class="show-user-createtime">
+                        <div class="user-img" style="background-image: url(http://192.168.1.149:82/uploads/users/8797733398773655.png);"></div>
+                        <div class="user-name">shenghao</div>
+                        <div class="createtime">2015-12-18 14:51:33</div>
+                    </div>
+                    <div class="show-content">
+
+                        <div class="content-left"></div>
+                        <div class="content-right">
+                            <div class="show-review">
+                                非常牛逼                                    </div>
+                            <div class="show-images">
+                                <div class="small-img toShowSwiper ToURL" data-showid="6" data-url="/wechat/show/ShowReviewImage?showreviewid=6" style="background-image:url(http://192.168.1.149:82/uploads/reviews/4/8902653089761806_srctn.jpg)"><img src="/uploads/reviews/4/8902653089761806_srctn.jpg"></div>
+                                <div class="small-img toShowSwiper ToURL" data-showid="6" data-url="/wechat/show/ShowReviewImage?showreviewid=6" style="background-image:url(http://192.168.1.149:82/uploads/reviews/4/2439822220549425_srctn.jpg)"><img src="/uploads/reviews/4/2439822220549425_srctn.jpg"></div>
+                                <div class="small-img toShowSwiper ToURL" data-showid="6" data-url="/wechat/show/ShowReviewImage?showreviewid=6" style="background-image:url(http://192.168.1.149:82/uploads/reviews/4/2673973047840660_srctn.jpg)"><img src="/uploads/reviews/4/2673973047840660_srctn.jpg"></div>
+                                <div class="small-img toShowSwiper ToURL" data-showid="6" data-url="/wechat/show/ShowReviewImage?showreviewid=6" style="background-image:url(/uploads/reviews/4/2040455281964600_srctn.jpg)"><img src="/uploads/reviews/4/2040455281964600_srctn.jpg"></div>
+                                <div style="clear:both;">
+                                </div>
+
+                                <div class="show-product-zan-reply">
+                                    <div class="product-name ToURL" data-url="/wechat/product/detail?ProductID=23">酥皮汤</div>
+                                    <div class="zan ToURL" data-userid="" data-showid="6" data-url="/wechat/login">
+                                        <em class="fa fa-thumbs-o-up"></em>赞(<span>1</span>)
+                                    </div>
+
+                                    <div class="reply ToURL" data-url="/Wechat/Show/RepliesList?showid=6">
+                                        <em class="fa fa-comment-o">&nbsp;</em>评论(13)
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="show-reply-list">
+                        <div class="reply-info">李庆华                                        :<em>hello</em>
+                        </div>
+                        <div class="reply-info">李庆华                                        :<em>sdfsdf </em>
+                        </div>
+                        <div class="reply-info">李庆华                                        :<em>没有什么好评价呀</em>
+                        </div>
+                        <div class="more-reply ToURL" data-url="/Wechat/Show/RepliesList?showid=6">更多评论<i class="fa fa-angle-right"></i></div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <div class="mobile-shadow"></div>
+        <div class="mobile-mine show">
+            <div class="mine-top">
+                <div class="mine-setting ToURL" data-url="/wechat/Setting?UserID=">设定</div>
+                <div class="mine-icon" style="background-image: url();">
+
+                </div>
+                <div class="mine-name"></div>
+            </div>
+            <div class="mine-menu">
+                <div class="menu-message ToURL" data-url="/wechat/message/order">
+                    <img src="/images/wechat/icon_message.png">
+                </div>
+                <div class="menu-subscribe ToURL" data-url="/wechat/favorite/product">
+                    <img src="/images/wechat/icon_subscribe.png">
+                </div>
+                <div class="menu-credit ToURL" data-url="/wechat/credit/history">
+                    <img src="/images/wechat/icon_credit.png">
+                </div>
+                <div class="menu-offer ToURL" data-url="/wechat/offer/package">
+                    <img src="/images/wechat/icon_offer.png">
+                </div>
+            </div>
+            <div class="mine-action mine-yue ToURL" data-url="/wechat/balance/detail">余额:￥0 <button class="btnRecharge">充值</button></div>
+            <div class="mine-action mine-order ToURL" data-url="/wechat/order/listing?isPay=pay">我的订单</div>
+            <div class="mine-action mine-return">帮助</div>
+            <div class="mine-action mine-logout ToURL" data-url="/wechat/login/logout">登出</div>
+            <div class="btnBack"></div>
+        </div>
+    </div>
+    <!--上传头像box开始-->
+    <div class="mobile-shadow-cmi"></div>
+    <div class="change-mine-icon">
+        <div id="upload-mine-icon"></div>
+        <div class="cancel ">取消</div>
+
+
+    </div>
+    <!--上传头像box结束-->
+</div>
+
+<script type="text/javascript" src="/resource/manage/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="/resource/pub/uploadfiles/jquery.uploadfile.min.js"></script>
+
+
+<script>
+    var show = {
+        run: function () {
+            this.toZan();
+            this.toURL();
+            this.scroll();
+            this.firstLogin();
+            this.hideMine();
+            this.toggleMine();
+            this.errorImage();
+            this.ShowUploadMineIconBox();
+        },
+
+        // 跳转
+        toURL: function () {
+            $('.ToURL').on('click', function () {
+                var url = $(this).data('url');
+
+                location.href = url;
+                return false;
+
+            });
+        },
+
+        errorImage: function () {
+            $(".show .user-img").error(function () {
+                $(this).attr("src", "http://web.xingbao.com.cn/uploads/default/default_product.png");
+            });
+
+            $(".mobile-mine .mine-icon > img").error(function () {
+                $(this).attr("src", "http://web.xingbao.com.cn/images/wechat/default_login.png");
+            });
+        },
+
+        // 获取更多晒图
+        getShowData: function (page) {
+            $.ajax({
+                type: "GET",
+                url: '/Wechat/Show/More',
+                dataType: "json",
+                data: {'p': page, 'pp': '10'},
+                success: function (obj) {
+                    var object = obj['Data'],
+                            length = object.length,
+                            html = '';
+
+
+                    if (length < 1) {
+
+                        $('.more').remove();
+                        $('.show-list .show:last-child').after('<div class="end">没有更多资料了!</div>');
+                        return false;
+                    }
+
+                    for (var i = 0; i < length; i++) {
+                        html += '<div class="show">';
+                        html += '                  <div class="show-wrapper">';
+                        html += '                   <div class="show-user-createtime">';
+                        html += '                     <div class="user-img" style="background-image: url(' + object[i]['UserIcon'] + ');"></div>';
+                        html += '                     <div class="user-name">' + object[i]['Nickname'] + '</div>';
+                        html += '                     <div class="createtime">' + object[i]['TimeCreated'] + '</div>';
+                        html += '                   </div>';
+                        html += '                   <div class="show-content">';
+
+                        html += '                     <div class="content-left"></div>';
+                        html += '                     <div class="content-right">';
+                        html += '                       <div class="show-review">';
+                        html += '                          ' + object[i]['Message'] + '                     </div>';
+                        html += '                       <div class="show-images">';
+
+                        for (var j = 0; j < object[i]['Images'].length; j++) {
+                            if (j >= 5) break;
+                            html += '    <div class="small-img toShowSwiper ToURL" data-url="/wechat/show/showreviewimage?showreviewid='+object[i]['ShowID']+'" data-showid="' + object[i]['ShowID'] + '" style="background-image:url(' + object[i]['Images'][j]['srctn'] + ');"><img src="' + object[i]['Images'][j]['srctn'] + '"></div>';
+                        }
+
+                        html += '                                                  <div style="clear:both;">';
+                        html += '                       </div>';
+
+                        html += '                       <div class="show-product-zan-reply">';
+                        html += '                         <div class="product-name">' + object[i]['ProductName'] + '</div>';
+
+                        //alert('Zan='+object[i]['Zan']+'  showID='+object[i]['ShowID']);
+                        html += '                         <div class="zan ToZan" data-userid="" data-showid="' + object[i]['ShowID'] + '" data-url="/wechat/login"><em class="' + (object[i]['Zan'] == '1' ? 'fa fa-thumbs-up' : 'fa fa-thumbs-o-up') + '"></em>赞(<span>' + object[i]['likeCount'] + '</span>)</div>';
+
+                        html += '                         <div class="reply ToURL" data-url="/Wechat/Show/RepliesList?showid=' + object[i]['ShowID'] + '"><em class="fa fa-comment-o">&nbsp;</em>评论(' + object[i]['RepliesCount'] + ')</div>';
+                        html += '                       </div>';
+                        html += '                     </div>';
+
+                        html += '                   </div>';
+                        html += '                </div>';
+
+                        html += '                   <div class="show-reply-list">';
+                        for (var k = 0; k < object[i]['Replies'].length; k++) {
+                            if (k >= 3) break;
+                            html += '  <div class="reply-info">' + object[i]['Replies'][k]['Nickname'] + ':<em>' + object[i]['Replies'][k]['Message'] + '</em></div>';
+                        }
+                        html += '                                            <div class="more-reply ToURL" data-url="/Wechat/Show/RepliesList?showid=' + object[i]['ShowID'] + '">更多评论<i class="fa fa-angle-right"></i></div>';
+                        html += '                   </div>                ';
+                        html += '                </div>';
+                        html += '              </div>';
+                    }
+
+
+                    var more = $('.more').prop("outerHTML");
+
+                    $('.more').remove();
+
+                    $('.show-list .show:last-child').after(html);
+                    $('.show-list .show:last-child').after(more);
+
+                    show.errorImage();
+                    show.toURL();
+                    show.showSwiper();
+                    show.toZan();
+                    return false;
+                }
+            });
+        },
+
+        //点赞更新数据
+        toZan: function () {
+            $('.ToZan').die().live('click', function () {
+                var userid = $(this).data('userid');
+
+                if (userid == '') {
+                    location.href = '/wechat/login';
+                    return false;
+                }
+                var showreviewid = $(this).data('showid');
+                var isliked = $("[data-showid='" + showreviewid + "'] em").hasClass('fa fa-thumbs-up') ? 1 : 0;
+                var liked = $("[data-showid='" + showreviewid + "'] span").text();
+
+                $.ajax({
+                    type: "GET",
+                    url: '/Wechat/Show/Like',
+                    dataType: "json",
+                    data: {'userid': userid, 'showreviewid': showreviewid, 'isliked': isliked, 'liked': liked},
+                    success: function (obj1) {
+                        var likedcount = obj1['Data'];
+                        likedcount = likedcount == '' ? '0' : likedcount;
+
+                        $("[data-showid='" + showreviewid + "'] span").text(likedcount);
+
+                        if (isliked) {
+                            $("[data-showid='" + showreviewid + "'] em").attr('class', 'fa fa-thumbs-o-up');
+                        }
+                        else {
+                            $("[data-showid='" + showreviewid + "'] em").attr('class', 'fa fa-thumbs-up');
+                        }
+
+
+                    }
+                });
+
+                return false;
+
+            });
+
+
+        },
+
+        // 滚动
+        scroll: function () {
+            var page = 1;
+            $(window).scroll(function () {
+
+                if ($(this).scrollTop() + $(window).height() + 20 >= $(document).height() && $(this).scrollTop() > 20) {
+
+                    if ($('.end').length > 0) return false;
+
+                    page++;
+                    show.getShowData(page);
+                    return false;
+                }
+            });
+        },
+
+        // 第一次登陆显示我的
+        firstLogin: function () {
+            var windowsHeight = $(window).height(),
+                    isLogin = $('body').hasClass('login'),
+                    shadow = $('.mobile-shadow').hasClass('shadow');
+
+            if (isLogin && shadow) $('body').css({'overflow': 'hidden'});
+            if (shadow) $('.mobile-mine').css({'right': '0'});
+
+            show.exceptMine();
+        },
+
+        // 隐藏我的
+        hideMine: function () {
+            $('.btnBack').click(function () {
+                var mineWidth = $('.mobile-mine').width() + 1;
+
+                $('.mobile-mine').animate({'right': '-' + mineWidth}, 'slow', function () {
+                    $('body').css({'overflow': 'auto'});
+                    $('.mobile-wrapper').height('auto');
+                    $('.shadow').hide();
+                });
+                return false;
+            });
+        },
+
+
+
+
+
+        // 点击除'我的'以外的位置
+        exceptMine: function () {
+            $('.mobile-shadow').click(function () {
+                $('.btnBack').click();
+                return false;
+            });
+            return false;
+        },
+
+        // 切换我的
+        toggleMine: function () {
+            var isLogin = $('.footer-user').hasClass('ToURL');
+
+            if (!isLogin) {
+                $('.footer-user').click(function () {
+                    var windowsHeight = $(window).height();
+                    $('.mobile-wrapper, .mobile-mine').height(windowsHeight);
+                    $('.mobile-shadow').hasClass('shadow') ? $('.shadow').show() : $('.mobile-shadow').addClass('shadow');
+
+                    $('.mobile-mine').animate({'right': 0});
+                    return false;
+                });
+            }
+
+            return false;
+        },
+
+        ShowUploadMineIconBox: function () {
+
+            $('.mine-icon').click(function () {
+
+                var box = $(".mobile-wrapper .change-mine-icon");
+                $('.mobile-shadow-cmi').addClass("shadow");
+                box.css("display", "block");
+                box.animate({'height': 160}, 'fast');
+
+                show.UploadMineIcon();
+
+            });
+
+            $('.change-mine-icon .cancel').click(function () {
+
+                show.hideUploadBox();
+            });
+
+        },
+
+        UploadMineIcon: function () {
+            console.log('test');
+            $("#upload-mine-icon").uploadFile(
+                    {
+                        url: "/wechat/home/receive",
+                        multiple: true,
+                        duplicateErrorStr: '重复的文件',
+                        dragDrop: false,
+                        maxFileCount: 5,
+                        fileName: "img",
+                        showCancel: false,
+                        uploadStr: '上传头像',
+                        showError: false,
+                        returnType: 'json',
+                        showStatusAfterSuccess: false,
+                        allowDuplicates: false,
+                        onSuccess: function (files, data, xhr, pd) {
+
+                            console.log(data['url']);
+                            $('.mine-icon').css('background-image', 'url(' + data['url'] + ')');
+                            show.hideUploadBox();
+                        }
+                    });
+        },
+
+        hideUploadBox: function () {
+
+            var box1 = $(".mobile-wrapper .change-mine-icon");
+
+
+            $('.mobile-shadow-cmi').removeClass("shadow");
+
+            box1.animate({'height': 0}, 'fast', '', function () {
+                box1.css("display", "none");
+            });
+
+        }
+    };
+
+    $(function () {
+        show.run();
+    });
+</script>
+
+
+
+</body></html>
