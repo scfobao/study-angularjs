@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <script src="../js/angular.js"></script>
+    <script src="../js/angular-messages.js"></script>
     <meta charset="UTF-8">
     <title></title>
     <style>
@@ -54,19 +55,12 @@
         <div class="row">
             <div class="large-12 columns">
                 <label>Your name</label>
-                <input type="text" placeholder="name" ng-model="signup.name" ng-minlength="3" ng-maxlength="10"
-                       name="name" required>
+                <input type="text" placeholder="name" ng-model="signup.name" ng-minlength="3" ng-maxlength="10"        name="name" required>
 
-                <div class="error"
-                     ng-show="signup_form.name.$dirty && signup_form.name.$invalid && signup_form.submitted">
-                    <small class="error" ng-show="signup_form.$error.required">your name is required</small>
-                    <small class="error" ng-show="signup_form.name.$error.minlength">your name is required to be at
-                        least 3 characters
-                    </small>
-                    <small class="error" ng-show="signup_form.name.$error.maxlength">Your name cannot be longer than 10
-                        characters
-                    </small>
-
+                <div ng-messages="signup_form.name.$error" class="error">
+                    <div ng-message="required">Make sure you enter your name</div>
+                    <div ng-message="minlength">your name must be at least 3 characters</div>
+                    <div ng-message="maxlength">your name cannot be longer than 20 characters.</div>
                 </div>
             </div>
 
@@ -116,7 +110,7 @@
                 </div>
             </div>
         </div>
-        <button type="submit"  class="button radius">register</button>
+        <button type="submit" class="button radius">register</button>
 
     </fieldset>
 
@@ -126,7 +120,7 @@
 
 </body>
 <script type="text/javascript">
-    var app = angular.module('myapp', []);
+    var app = angular.module('myapp', ['ngMessages']);
 
     app.controller('signupController', function ($scope) {
         $scope.submitted = false;
