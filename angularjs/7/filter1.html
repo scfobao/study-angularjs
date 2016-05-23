@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="../js/angular.js"></script>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body >
+<div ng-controller="MyController" ng-app="filterapp">
+    <h1>{{123.456789 | number:2}}</h1>
+
+    <h2>{{"liqinghua" | uppercase}}</h2>
+    <h2>{{9000|currency}}</h2>
+    <h2>{{'2015-6-1 00'|date:'longDate'}}</h2>
+    <h3>{{['liqinghua','liao','liyue','shifan','liangshanquan','liyouming']|filter:'l'}}</h3>
+    <h3>{{['Ari','like','to','Travel']|filter:isCapitalized}}</h3>
+    <h3>{{name}}</h3>
+    <h3>{{[{'name':'liqinghua'},{'name':'shifan'},{'name':'liyue'},{'name':'liyouming'},{'name':'liangshanqiong'},{'name':'liao'}] | filter:'an'}}</h3>
+</div>
+
+</body>
+<script type="text/javascript">
+    var app1 = angular.module('filterapp', []);
+    app1.controller('MyController', function ($scope,$filter) {
+        $scope.name = $filter('uppercase')('klsdiofnsdfoiio');
+        $scope.isCapitalized=function(str){
+          return str[0]==str[0].toUpperCase();
+        };
+    });
+
+</script>
+
+</html>

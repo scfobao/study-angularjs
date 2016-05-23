@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="../js/angular.js"></script>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /*input.ng-valid {border:1px solid green;}
+        input.ng-invalid {border:1px solid red;}*/
+        .large-12 {font-size: 1.2em;}
+        .row {height: auto; margin: 10px 0;}
+        .row label {display: block; margin-bottom: 3px;}
+        .columns input{width: 50%; height: 30px; text-indent: 5px;}
+        .button {background-color: #006600; color:#fff; height: 40px; width: 80px; border: none;}
+        .radius {border-radius: 5px;}
+        .error {color:red;}
+    </style>
+</head>
+<body>
+
+<form name="signup_form" novalidate ng-submit="signupForm()" ng-app>
+    <fieldset style="border:1px solid #ccc;">
+        <legend>Signup</legend>
+        <div class="row">
+            <div class="large-12 columns">
+                <label>Your name</label>
+                <input type="text" placeholder="name" ng-model="signup.name" ng-minlength="3" ng-maxlength="10" name="name" required>
+                <div class="error" ng-show="signup_form.name.$dirty && signup_form.name.$invalid"><small class="error" ng-show="signup_form.$error.required">your name is required</small>
+                    <small class="error" ng-show="signup_form.name.$error.minlength">your name is required to be at least 3 characters</small>
+                    <small class="error" ng-show="signup_form.name.$error.maxlength">Your name cannot be longer than 10 characters</small>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="row">
+            <div class="large-12 columns">
+                <label>your email</label>
+                <input type="email" placeholder="Email" name="email" ng-model="signup.email" ng-minlength="3" ng-maxlength="20" required>
+                <div class="error" ng-show="signup_form.email.$dirty && signup_form.email.$invalid">
+                    <small class="error" ng-show="signup_form.email.$error.minlength">your email is required to be at least 3 characters</small>
+                    <small class="error" ng-show="signup_form.email.$error.maxlength">your email cannot be longer than 20 characters.</small>
+                    <small class="error" ng-show="signup_form.email.$error.email">That is not a vaild email.Please input a valid email.</small>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="button radius">submit</button>
+
+    </fieldset>
+
+
+</form>
+
+
+</body>
+</html>

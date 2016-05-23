@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <script src="../js/angular.js"></script>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div ng-controller="parentController" ng-app="myapp">
+    <div ng-controller="childController" ng-app="myapp">
+    <button ng-click="sayHello()">say hello</button>
+        <h2>{{1+1}}</h2>
+    </div>
+    <h1>{{person}}</h1>
+</div>
+
+</body>
+<script type="text/javascript">
+    var app = angular.module('myapp', []);
+    app.controller('parentController', function ($scope) {
+        $scope.person = {greeted:false};
+
+    });
+
+    app.controller('childController',function($scope){
+        $scope.sayHello=function(){
+            $scope.person.name='李庆华';
+            $scope.person.sex ='男';
+        };
+
+    });
+</script>
+</html>

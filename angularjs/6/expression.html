@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="../js/angular.js"></script>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div ng-controller="MyController" ng-app="app">
+    <input ng-model="expr" type="text" placeholder="输入一个表达式"/>
+
+    <h2>{{parseValue}}</h2>
+
+</div>
+
+</body>
+<script type="text/javascript">
+    var app = angular.module("app", []);
+    app.controller('MyController', function ($scope, $parse) {
+
+        $scope.$watch('expr', function (newVal, oldVal, scope) {
+            if (newVal !== oldVal) {
+                var parseFun = $parse(newVal);
+               $scope.parseValue = parseFun(scope);
+                //$scope.parseValue = scope;
+            }
+
+        });
+
+    });
+</script>
+</html>
