@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="../js/angular.js"></script>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div ng-controller="CityController" ng-app="myApp">
+
+    <select ng-model="city" ng-options="city.name for city in cities">
+        <option value="">choose city</option>
+    </select>
+    Best City:{{city.name}}
+</div>
+
+</body>
+<script type="text/javascript">
+    var app=angular.module('myApp',[]);
+    app.controller('CityController',function($scope){
+
+        $scope.cities=[{name:'中山'},{name:'珠海'},{name:'长沙'},{name:'东京'},{name:'纽约'}];
+
+    });
+</script>
+</html>

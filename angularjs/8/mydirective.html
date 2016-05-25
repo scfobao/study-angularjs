@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/angular.js"></script>
+</head>
+<body>
+<my-directive></my-directive>
+
+<div my-dire
+     my-url="http://www.163.com" my-link-text="打开网易">
+</div>
+
+<a href="http://www.163.com">打开网易</a>
+<h1 ng-init="greeting='hello world!'">
+    The greeting is :{{greeting}}
+</h1>
+
+</body>
+<script type="text/javascript">
+    var app = angular.module('myApp', []);
+    app.directive('myDirective', function () {
+        return {
+            restrict: 'E',
+            replace: true,
+            template: '<a href="http://google.com">Click me to go to Google</a>'
+        };
+
+    });
+
+    app.directive('myDire', function () {
+        return {
+            restrict: 'A',
+            replace: true,
+            scope: {
+                myUrl: '@',
+                myLinkText: '@'
+            },
+            template: '<a href="{{myUrl}}">{{myLinkText}}</a>'
+        }
+    });
+</script>
+</html>

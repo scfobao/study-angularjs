@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <script src="../js/angular.js"></script>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h1>Wrong Way</h1>
+<img src="{{imgSrc}}"/>
+<h1>Right Way</h1>
+<img ng-src="{{imgSrc}}"/>
+
+</body>
+<script type="text/javascript">
+
+    var app=angular.module('myApp',[]);
+    app.run(function($rootScope,$timeout){
+
+        $timeout(function(){
+            $rootScope.imgSrc="http://localhost:82/uploads/reviews/98/201605180636492447.png";
+        },5000);
+    });
+</script>
+</html>

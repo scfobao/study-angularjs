@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <script src="../js/angular.js"></script>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div ng-controller="SomeController" ng-app="myApp">
+    {{someModel.someProerty}}
+    <button ng-click="someAction()">Communicate</button>
+
+</div>
+
+</body>
+<script type="text/javascript">
+    var app=angular.module('myApp',[]).controller('SomeController',function($scope){
+        $scope.someModel={
+            someProerty:'hello computer'
+        };
+        $scope.someAction=function(){
+          $scope.someModel.someProerty='hello human';
+        };
+    });
+</script>
+</html>

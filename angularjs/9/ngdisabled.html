@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <script src="../js/angular.js"></script>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<input type="text" ng-model="someProperty" placeholder="试验ng-disabled">!
+<button ng-model="button" ng-disabled="!someProperty">测试ng-disabled的按钮</button>
+<hr>
+
+<textarea ng-disabled="isDisabled">等待5秒可用</textarea>
+<hr>
+Type here to make sibling readonly:
+<input type="text" ng-model="someProperty"><br>
+<input type="text" ng-readonly="someProperty" value="Some text here!">
+<hr>
+<lable>someProerty={{someProerty}}</lable>
+<input type="checkbox" ng-checked="someProerty" ng-init="someProerty=true"
+       ng-model="someProerty">
+<hr>
+<label>Select Two fish：</label>
+<input type="checkbox" ng-model="isTwoFish"><br>
+<select>
+    <option>one fish</option>
+    <option ng-selected="isTwoFish">Two fish</option>
+</select>
+</body>
+<script type="text/javascript">
+    var app=angular.module('myApp',[])
+    .run(function ($rootScope,$timeout){
+        $rootScope.isDisabled=true;
+                $timeout(function(){
+                    $rootScope.isDisabled=false;
+                },5000);
+    });
+</script>
+
+</html>

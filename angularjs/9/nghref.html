@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <script src="../js/angular.js"></script>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<a ng-href="{{myHref}}">I'm feeling lucky,when I load</a>
+<a href="{{myHref}}">I 'm feeling 404</a>
+
+</body>
+<script type="text/javascript">
+    var app=angular.module('myApp',[]);
+    app.run(function($rootScope,$timeout){
+        $timeout(function(){
+            $rootScope.myHref='http://www.163.com';
+        },2000);
+    });
+</script>
+</html>
